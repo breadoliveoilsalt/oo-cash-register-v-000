@@ -15,6 +15,8 @@ class CashRegister
   def apply_discount
     if !@discount == nil
       @total *= (100-@discount)/100.to_f
+      "After the discount, the total comes
+ to #{@total}."
     end
   end
 
