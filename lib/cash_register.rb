@@ -22,8 +22,7 @@ class CashRegister
     else
       discount_percentage = (100-@discount)/100.to_f
       @total *= discount_percentage
-      "After the discount, the total comes
- to #{@total.to_i}."
+      "After the discount, the total comes to #{@total.to_i}."
     end
         #  binding.pry
   end
