@@ -2,12 +2,13 @@ require 'pry'
 
 class CashRegister
 
-  attr_accessor :total, :previous_total, :discount, :items
+  attr_accessor :total, :discount, :items, :prior_charge
 
   def initialize(discount = nil)
     @total = 0
     @discount = discount
     @items = [ ]
+    @prior_charge = [ ]
   end
 
 
@@ -17,6 +18,7 @@ class CashRegister
     while i < quantity
       @total += price
       @items << title
+      @prior_charge << price
       i += 1
     end
   end
@@ -32,6 +34,7 @@ class CashRegister
   end
 
   def void_last_transaction
+    @total -= prior_charge.pop
   end
 
 end
