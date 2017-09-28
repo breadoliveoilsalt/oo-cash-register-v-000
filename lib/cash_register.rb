@@ -29,9 +29,9 @@ class CashRegister
       @total *= discount_percentage
       "After the discount, the total comes to $#{@total.to_i}."
     end
-        #  binding.pry
   end
 
   def void_last_transaction
+  end
 
 end
