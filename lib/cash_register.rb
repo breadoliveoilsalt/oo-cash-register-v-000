@@ -18,13 +18,12 @@ class CashRegister
     if @discount == nil
       puts "There is no discount to apply."
     else
-      binding.pry
       discount_percentage = (100-@discount)/100.to_f
-
       @total *= discount_percentage
       puts "After the discount, the total comes
  to #{@total}."
     end
+          binding.pry
   end
 
 end
