@@ -23,7 +23,7 @@ class CashRegister
       puts "After the discount, the total comes
  to #{@total}."
     end
-          binding.pry
+        #  binding.pry
   end
 
 end
